@@ -1,0 +1,16 @@
+LEVEL 1
+word
+apple
+moto
+END LEVEL 1
+
+LEVEL 2
+respeto
+errores
+END LEVEL 2
+
+LEVEL 3
+esternocleido
+reflujo
+END LEVEL 3
+

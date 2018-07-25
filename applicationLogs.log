@@ -1,0 +1,36 @@
+[main] INFO  com.sofka.taller.App  - Hello world
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] DEBUG com.sofka.taller.levels.Level  - Hola
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabra
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] DEBUG com.sofka.taller.levels.Level  - Hola
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabraPalabra retornada
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] DEBUG com.sofka.taller.levels.Level  - Hola
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabraPalabra retornada
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] DEBUG com.sofka.taller.levels.Level  - Hola
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabraPalabra retornada
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] DEBUG com.sofka.taller.levels.Level  - Hola
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabraPalabra retornada
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] DEBUG com.sofka.taller.levels.Level  - Hola
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabraPalabra retornada
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabrarespeto
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabrarespeto
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabraerrores
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabrarespeto
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabraerrores
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabraesternocleido
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabraesternocleido
+[main] WARN  com.sofka.taller.App  - Inicio de seleccion de palabra
+[main] WARN  com.sofka.taller.App  - Fin de seleccion de palabrareflujo
+[main] ERROR com.sofka.taller.App  - An error occurred Enter a valid input

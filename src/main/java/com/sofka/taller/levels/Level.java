@@ -6,13 +6,17 @@ import java.util.Random;
 
 public abstract class Level {
     static final Logger logger = Logger.getLogger(Level.class);
+    private static final int LETTER_IN_WORD= 1;
+    private static final int LETTER_NOT_IN_WORD = 2;
+    private static final int WIN = 3;
+    private static final int LOOSE= 4;
     protected ReadData readData;
     static final int numbersOfAttempts = 6;
     static int attempts;
     public String wordToGuess;
 
-    public String [] lettersToGuess;
-    public String [] guessedLetters;
+    private String [] lettersToGuess;
+    private char [] guessedLetters;
 
     public Level() {
         attempts = numbersOfAttempts;
@@ -28,7 +32,7 @@ public abstract class Level {
         wordToGuess = words.get(randomNumber);
 
         lettersToGuess = wordToGuess.split("");
-        guessedLetters = new String[lettersToGuess.length];
+        guessedLetters = new char[lettersToGuess.length];
         return wordToGuess;
 
     }
@@ -38,7 +42,7 @@ public abstract class Level {
         for (int i = 0; i < lettersToGuess.length; i++) {
             if(wordToGuess.charAt(i) == letter) {
                 // La letra existia en la palabra
-                guessedLetters[i] = String.valueOf(letter);
+                guessedLetters[i] = letter;
                 trueGuess = true;
             }
         }
@@ -46,17 +50,17 @@ public abstract class Level {
             //Validar si ya adivino todas la palabras
             if(validateWord()) {
                 // Ya adivino la palabra
-                return 3;
+                return WIN;
             }
-            return 1;
+            return LETTER_IN_WORD;
         }
         attempts--;
         if(validateNumberOfAttempts()) {
             // No se han superado el numero de intentos
-            return 2;
+            return LETTER_NOT_IN_WORD;
         }
         // Se superaron el numero de intentos
-        return  4;
+        return  LOOSE;
     }
 
     private boolean validateNumberOfAttempts() {
@@ -67,12 +71,12 @@ public abstract class Level {
     }
 
     private boolean validateWord() {
-        for (int i = 0; i < lettersToGuess.length; i++) {
-            if(!lettersToGuess[i].equals(guessedLetters[i])) {
-                return false;
-            }
+        String guess = String.valueOf(guessedLetters);
+        if(guess.equals(wordToGuess)) {
+            return true;
         }
-        return true;
+        return false;
+
     }
 
     public void draw() {
@@ -208,7 +212,19 @@ public abstract class Level {
             System.out.println("GAME OVER");
             break;
         }
+        printGuessedCharacters();
     }
 
+    private void printGuessedCharacters() {
+        for (int i = 0; i < guessedLetters.length; i++) {
+            if(!Character.isLetter(guessedLetters[i])) {
+                System.out.printf(" %c%c ", '_', '_');
+            }else {
+                System.out.printf(" %c " , guessedLetters[i]);
+            }
+
+        }
+        System.out.println("");
+    }
 
 }

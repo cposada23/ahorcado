@@ -1,18 +1,19 @@
 package com.sofka.taller;
 
+import com.sofka.taller.Utils.Props;
 import com.sofka.taller.Utils.Util;
+
 import java.util.LinkedList;
 
+import com.sofka.taller.factory.LevelFactory;
 import com.sofka.taller.input.ReadData;
 import com.sofka.taller.input.ReadFromTXT;
 import com.sofka.taller.levels.Level;
-import com.sofka.taller.levels.Level1;
-
-import com.sofka.taller.levels.Level2;
-import com.sofka.taller.levels.Level3;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+
+
 
 
 /**
@@ -20,10 +21,27 @@ import org.apache.log4j.PropertyConfigurator;
  *
  */
 public class App {
+    private static Props props = Props.getInstance();
     private static LinkedList<Player> sessionPlayers = new LinkedList();
     private static final Logger logger = LogManager.getLogger(App.class);
     private static final int INITIAL_SCORE = 0;
     private static final int MAX_LEVEL = 3;
+
+
+    /** Constantes de los menus */
+    private static final char ADD_PLAYER = '1';
+    private static final char VIEW_SCORES = '2';
+    private static final char EXIT = '3';
+    private static final char SET_LEVEL = '1';
+    private static final char SET_ORIGIN = '2';
+    private static final char PLAY_HANGMAN = '3';
+    private static final char RETURN = '4';
+    private static final int LETTER_IN_WORD= 1;
+    private static final int LETTER_NOT_IN_WORD = 2;
+    private static final int WIN = 3;
+    private static final int LOOSE= 4;
+
+
 
     /** Initial method */
      private static ReadData readData;
@@ -32,29 +50,37 @@ public class App {
 
 
     public static void main(String[] args) {
+        /** Ejemplo de uso de properties */
+        String result = props.getProperty("uno");
+        System.out.println(result);
+        /** Fin ejemplo de uso de properties */
+
+
         PropertyConfigurator.configure("log4j.properties");
-        boolean jugar = true;
+        boolean play = true;
         char initialOption;
-        while (jugar) {
-            configureDefaults();
-            showInitialMenu();
+        while (play) {
+
             try {
+                configureDefaults();
+                showInitialMenu();
                 initialOption = Util.readChar("Enter an option");
                 switch (initialOption) {
-                    case '1':
+                    case ADD_PLAYER:
                         String playerName = addPlayer();
                         beginGame(playerName);
                         break;
-                    case '2':
+                    case VIEW_SCORES:
                         break;
-                    case '3':
-                        jugar = false;
+                    case EXIT:
+                        play = false;
                         break;
                     default:
                         System.out.println("Choose a valid option");
                 }
-
-            } catch (Exception e) {
+            } catch (ClassNotFoundException e) {
+                logger.error("An error occurred while trying to configure defaults");
+            } catch (Exception  e) {
                 logger.error("An error occurred " + e.getMessage());
             }
         }
@@ -62,9 +88,9 @@ public class App {
 
     }
 
-    private static void configureDefaults(){
+    private static void configureDefaults() throws ClassNotFoundException {
         readData = new ReadFromTXT();
-        level = new Level1();
+        level = LevelFactory.getLevel(1);
         level.setReadData(readData);
     }
 
@@ -74,27 +100,18 @@ public class App {
             int levelNumber = Util.readInt("Enter new level");
             boolean ask = true;
             do {
-                switch (levelNumber) {
-                    case 1:
-                        ask = false;
-                        level = new Level1();
-                        break;
-                    case 2:
-                        ask = false;
-                        level = new Level2();
-                        break;
-                    case 3:
-                        ask = false;
-                        level = new Level3();
-                        break;
-                    default:
-                        System.out.println("Please enter a valid level");
-                        break;
+                try {
+                    level = LevelFactory.getLevel(levelNumber);
+                    ask = false;
+                }catch (ClassNotFoundException e) {
+                    logger.warn("Please enter a valid level");
+                    levelNumber = Util.readInt("Enter new level");
                 }
+
             }while(ask);
             level.setReadData(readData);
         } catch (Exception e) {
-            logger.error("An error occurred while changin the level" + e.getMessage());
+            logger.error("An error occurred while changing the level" + e.getMessage());
         }
     }
 
@@ -107,16 +124,16 @@ public class App {
             try {
                 option = Util.readChar("Enter an option");
                 switch (option) {
-                    case '1':
+                    case SET_LEVEL:
                         setLevel();
                         break;
-                    case '2':
+                    case SET_ORIGIN:
                         // TODO SET ORIGIN
                         break;
-                    case '3':
+                    case PLAY_HANGMAN:
                         playHangMan();
                         break;
-                    case '4':
+                    case RETURN:
                         play = false;
                         break;
                     default:
@@ -133,6 +150,7 @@ public class App {
     private static void playHangMan(){
         /** Obtener la palabra */
         String wordToGuess = level.selectWord();
+        System.out.println(wordToGuess);
 
         boolean finish = false;
         while(!finish) {
@@ -143,17 +161,18 @@ public class App {
                 char letter = Util.readChar("Enter letter to guess");
                 int result = level.validate(letter);
                 switch (result) {
-                    case 1:
-                        System.out.println("The letter is in the word, good job");
+                    case LETTER_IN_WORD:
+                        System.out.println("The letter is in the word, good job!");
                         break;
-                    case 2:
-                        System.out.println("The letter is not in the word, try again");
+                    case LETTER_NOT_IN_WORD:
+                        System.out.println("The letter is not in the word, try again!");
                         break;
-                    case 3:
-                        System.out.println("You win!");
+                    case WIN:
+                        printWinning();
+                        finish = true;
                         break;
-                    case 4:
-                        System.out.println("You loose");
+                    case LOOSE:
+                        printLoosing();
                         finish = true;
                         break;
                 }
@@ -165,6 +184,25 @@ public class App {
 
 
     }
+
+    private static void printWinning() {
+        System.out.println("****************************************");
+        System.out.println("*                                      *");
+        System.out.println("*          YOU WIN!!!!!!               *");
+        System.out.println("*                                      *");
+        System.out.println("****************************************");
+    }
+
+    private static void printLoosing() {
+        System.out.println("****************************************");
+        System.out.println("*                                      *");
+        System.out.println("*          YOU LOOSE!!!!!!             *");
+        System.out.println("*                                      *");
+        System.out.println("****************************************");
+    }
+
+
+
 
     private static String addPlayer(){
         nPlayers++;

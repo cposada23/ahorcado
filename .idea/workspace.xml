@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24955f21-2a88-44a3-bf72-85a91d0b3654" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applicationLogs.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sofka/taller/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sofka/taller/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sofka/taller/levels/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sofka/taller/levels/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sofka/taller/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sofka/taller/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sofka/taller/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sofka/taller/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sofka/taller/Utils/Log.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sofka/taller/Utils/Log.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sofka/taller/Utils/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sofka/taller/Utils/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sofka/taller/input/ReadData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sofka/taller/input/ReadData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sofka/taller/input/ReadFromTXT.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sofka/taller/input/ReadFromTXT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sofka/taller/levels/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sofka/taller/levels/Level.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sofka/taller/levels/Level1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sofka/taller/levels/Level1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sofka/taller/levels/Level2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sofka/taller/levels/Level2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sofka/taller/levels/Level3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sofka/taller/levels/Level3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sofka/taller/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/sofka/taller/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sofka/taller/Utils/Props.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sofka/taller/Utils/Props.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -63,8 +47,8 @@
       <file leaf-file-name="Props.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sofka/taller/Utils/Props.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="187">
+              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="357">
+              <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -162,13 +146,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sofka/taller/levels/Level3.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sofka/taller/input/ReadFromTXT.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sofka/taller/Utils/Props.java" />
         <option value="$PROJECT_DIR$/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/sofka/taller/factory/LevelFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sofka/taller/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sofka/taller/levels/Level.java" />
         <option value="$PROJECT_DIR$/log4j.properties" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sofka/taller/Utils/Props.java" />
       </list>
     </option>
   </component>
@@ -336,7 +320,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="846" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -347,7 +330,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3478854" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3478854" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -549,13 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sofka/taller/input/ReadFromTXT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
@@ -588,16 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sofka/taller/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="220" column="37" lean-forward="true" selection-start-line="220" selection-start-column="37" selection-end-line="220" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/applicationLogs.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -623,20 +589,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sofka/taller/Utils/Props.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sofka/taller/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        <state relative-caret-position="115">
+          <caret line="220" column="37" lean-forward="true" selection-start-line="220" selection-start-column="37" selection-end-line="220" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
         </state>
       </provider>
     </entry>

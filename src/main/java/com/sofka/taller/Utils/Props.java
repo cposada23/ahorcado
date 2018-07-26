@@ -18,7 +18,6 @@ public final class Props {
     }
 
     public  String getProperty(String name) {
-
         String result = properties.getProperty(name);
         return result;
     }
